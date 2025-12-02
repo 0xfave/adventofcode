@@ -1,21 +1,19 @@
-use serde::Serialize;
+mod lib;
 
-#[derive(Serialize, Debug)]
-struct Point {
-    x: i32,
-    y: i32,
-}
+use std::fs;
 
 fn main() {
-    println!("Hello, world!");
+    println!("🎄 Advent of Code 2025 🎄\n");
 
-    let point = Point { x: 1, y: 2 };
+    // Day 1
+    println!("Day 1: Secret Entrance");
+    let day01_input = fs::read_to_string("src/lib/day01/input.txt").expect("Failed to read day01 input file");
 
-    // Convert the Point to a JSON string.
-    let serialized = serde_json::to_string(&point).unwrap();
+    let part1_answer = lib::day01::day01_part1::solve(&day01_input);
+    println!("Part 1 Answer: {}", part1_answer);
 
-    // Prints serialized = {"x":1,"y":2}
-    println!("Serialized point = {serialized}",);
+    let part2_answer = lib::day01::day01_part2::solve(&day01_input);
+    println!("Part 2 Answer: {}", part2_answer);
 }
 
 #[cfg(test)]
