@@ -3,8 +3,6 @@
 // Problem: Track a dial (0-99) starting at 50, follow rotation instructions,
 // and count how many times it lands on 0.
 
-use std::fs;
-
 /// Parse a single instruction line like "L50" or "R6"
 /// Returns: (direction_char, distance_number)
 pub fn parse_instruction(line: &str) -> (char, i32) {
@@ -15,10 +13,12 @@ pub fn parse_instruction(line: &str) -> (char, i32) {
 }
 
 /// Calculate the new position after a rotation
+///
 /// Parameters:
 ///   - current: current dial position (0-99)
 ///   - direction: 'L' or 'R'
 ///   - distance: how many clicks to rotate
+///
 /// Returns: new position (0-99)
 pub fn rotate_dial(current: i32, direction: char, distance: i32) -> i32 {
     // L means subtract (move left/down), R means add (move right/up)

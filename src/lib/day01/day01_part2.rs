@@ -6,10 +6,12 @@
 use super::day01_part1::{parse_instruction, rotate_dial};
 
 /// Count how many times the dial passes through 0 during a rotation
+///
 /// Parameters:
 ///   - start: starting position (0-99)
 ///   - direction: 'L' or 'R'
 ///   - distance: how many clicks to rotate
+///
 /// Returns: number of times 0 is crossed/passed
 fn count_zero_crossings(start: i32, direction: char, distance: i32) -> i32 {
     let mut count = 0;

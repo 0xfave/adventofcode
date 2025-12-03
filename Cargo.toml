@@ -1,12 +1,12 @@
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [package]
-    authors = ["Paul Razvan Berg"]
-    description = "A template for developing Rust projects, with sensible defaults"
+    authors = ["0xFave"]
+    description = "My solutions for Advent of Code 2025, implemented in Rust. "
     edition = "2021"
-    homepage = "https://github.com/PaulRBerg/rust-template"
+    homepage = "https://github.com/0xfave/adventofcode"
     license = "MIT"
-    name = "rust-template"
+    name = "adventofcode"
     version = "0.1.0"
 
 [dependencies]
