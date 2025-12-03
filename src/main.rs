@@ -26,6 +26,18 @@ fn main() {
 
     let day02_part2 = lib::day02::day02_part2::solve(&day02_input);
     println!("Part 2 Answer: {}", day02_part2);
+
+    println!("\n---\n");
+
+    // Day 3
+    println!("Day 3: Lobby");
+    let day03_input = fs::read_to_string("src/lib/day03/input.txt").expect("Failed to read day03 input file");
+
+    let day03_part1 = lib::day03::day03_part01::solve(&day03_input);
+    println!("Part 1 Answer: {}", day03_part1);
+
+    let day03_part2 = lib::day03::day03_part02::solve(&day03_input);
+    println!("Part 2 Answer: {}", day03_part2);
 }
 
 #[cfg(test)]
