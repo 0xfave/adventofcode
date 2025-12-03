@@ -1,42 +1,51 @@
-# Rust Template [![Github Actions][gha-badge]][gha] [![License: MIT][license-badge]][license]
+# 🎄 Advent of Code 2025 [![License: MIT][license-badge]][license]
 
-[gha]: https://github.com/PaulRBerg/rust-template/actions
-[gha-badge]: https://github.com/PaulRBerg/rust-template/actions/workflows/ci.yml/badge.svg
 [license]: https://opensource.org/licenses/MIT
 [license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
 
-A template for developing Rust projects, with sensible defaults.
+My solutions for [Advent of Code 2025](https://adventofcode.com/2025), implemented in Rust.
 
-## Getting Started
+## Progress
 
-Click the [`Use this template`](https://github.com/PaulRBerg/rust-template/generate) button at the top of the page to
-create a new repository with this repo as the initial state.
+- ⭐⭐ **Day 1**: Secret Entrance - Dial rotation and counting zero crossings
+- ⭐⭐ **Day 2**: Gift Shop - Finding invalid product IDs with repeating patterns
 
-## Features
+## Running Solutions
 
-### Sensible Defaults
+```bash
+# Run all solutions
+cargo run --release
 
-This template comes with sensible default configurations in the following files:
+# Run tests
+cargo test
 
-```text
-├── .editorconfig
-├── .gitignore
-├── .prettierrc.yml
-├── Cargo.toml
-├── justfile
-└── rustfmt.toml
+# Run linting and formatting checks
+just full-check
 ```
 
-### GitHub Actions
+## Project Structure
 
-This template comes with GitHub Actions pre-configured. Your code will be linted and tested on every push and pull
-request made to the `main` branch.
+```text
+src/
+├── lib/
+│   ├── day01/
+│   │   ├── day01_part1.rs  # Day 1 Part 1 solution
+│   │   ├── day01_part2.rs  # Day 1 Part 2 solution
+│   │   ├── input.txt       # Day 1 puzzle input
+│   │   └── mod.rs
+│   ├── day02/
+│   │   ├── day02_part1.rs  # Day 2 Part 1 solution
+│   │   ├── day02_part2.rs  # Day 2 Part 2 solution
+│   │   ├── input.txt       # Day 2 puzzle input
+│   │   └── mod.rs
+│   └── mod.rs
+├── lib.rs
+└── main.rs
+```
 
-You can edit the CI script in [.github/workflows/ci.yml](./.github/workflows/ci.yml).
+## About Advent of Code
 
-## Usage
-
-See [The Rust Book](https://doc.rust-lang.org/book/) and [The Cargo Book](https://doc.rust-lang.org/cargo/index.html).
+[Advent of Code](https://adventofcode.com/) is an annual event featuring daily programming puzzles throughout December. Each day presents a two-part challenge that tests problem-solving skills and algorithmic thinking.
 
 ## License
 
